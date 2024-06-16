@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "vitepress": "^1.2.3"
+  },
+  "author": {
+    "name": "kun",
+    "email": "kungalgame@gamil.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KUN1007/kun-vitepress-template.git"
+  },
+  "scripts": {
+    "dev": "vitepress dev --host 127.0.0.1 --port 7777",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "dependencies": {
+    "@giscus/vue": "^2.4.0"
+  }
+}
