@@ -1,0 +1,267 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Colors
+ *
+ * Each colors have exact same color scale system with 3 levels of solid
+ * colors with different brightness, and 1 soft color.
+ * 
+ * - `XXX-1`: The most solid color used mainly for colored text. It must
+ *   satisfy the contrast ratio against when used on top of `XXX-soft`.
+ *
+ * - `XXX-2`: The color used mainly for hover state of the button.
+ *
+ * - `XXX-3`: The color for solid background, such as bg color of the button.
+ *   It must satisfy the contrast ratio with pure white (#ffffff) text on
+ *   top of it.
+ *
+ * - `XXX-soft`: The color used for subtle background such as custom container
+ *   or badges. It must satisfy the contrast ratio when putting `XXX-1` colors
+ *   on top of it.
+ *
+ *   The soft color must be semi transparent alpha channel. This is crucial
+ *   because it allows adding multiple "soft" colors on top of each other
+ *   to create a accent, such as when having inline code block inside
+ *   custom containers.
+ *
+ * - `default`: The color used purely for subtle indication without any
+ *   special meanings attched to it such as bg color for menu hover state.
+ *
+ * - `brand`: Used for primary brand colors, such as link text, button with
+ *   brand theme, etc.
+ *
+ * - `tip`: Used to indicate useful information. The default theme uses the
+ *   brand color for this by default.
+ *
+ * - `warning`: Used to indicate warning to the users. Used in custom
+ *   container, badges, etc.
+ *
+ * - `danger`: Used to show error, or dangerous message to the users. Used
+ *   in custom container, badges, etc.
+ * -------------------------------------------------------------------------- */
+
+/* ------------------------ KUNGalgame Colors-------------------------------- */
+
+:root {
+  --kungalgame-font-color-0: #777777;
+  --kungalgame-font-color-1: #666666;
+  --kungalgame-font-color-2: #4d4d4d;
+  --kungalgame-font-color-3: #242424;
+
+  --kungalgame-white: #ffffff;
+
+  --kungalgame-gray-4: #bcc8d4;
+
+  --kungalgame-blue-0: #ddf4ff;
+  --kungalgame-blue-1: #b6e3ff;
+  --kungalgame-blue-2: #80ccff;
+  --kungalgame-blue-3: #54aeff;
+  --kungalgame-blue-4: #218bff;
+  --kungalgame-blue-5: #0969da;
+
+  --kungalgame-green-4: #2da44e;
+
+  --kungalgame-yellow-2: #fcd554;
+  --kungalgame-yellow-3: #d4a72c;
+
+  --kungalgame-red-0: #ffebe9;
+  --kungalgame-red-1: #ffcecb;
+  --kungalgame-red-2: #ffaba8;
+  --kungalgame-red-3: #ff8182;
+  --kungalgame-red-4: #fa4549;
+  --kungalgame-red-5: #cf222e;
+
+  --kungalgame-purple-4: #a475f9;
+
+  --kungalgame-pink-0: #ffeff7;
+  --kungalgame-pink-3: #ff80c8;
+  --kungalgame-pink-4: #e85aad;
+
+  /* 
+   
+    transparent color
+    
+    */
+
+  --kungalgame-trans-white-2: #ffffffd9;
+  --kungalgame-trans-white-5: #ffffff8e;
+  /* This placeholder is necessary; otherwise, it could lead to a collapse */
+  --kungalgame-trans-white-9: #ffffff00;
+
+  --kungalgame-trans-blue-0: #ddf4ff77;
+  --kungalgame-trans-blue-1: #b6e3ff77;
+  --kungalgame-trans-blue-2: #80ccff77;
+  --kungalgame-trans-blue-3: #54aeff77;
+  --kungalgame-trans-blue-4: #218bff77;
+
+  --kungalgame-trans-yellow-2: #fcd55477;
+
+  --kungalgame-trans-red-0: #ffebe977;
+  --kungalgame-trans-red-1: #ffcecb77;
+  --kungalgame-trans-red-2: #ffaba877;
+  --kungalgame-trans-red-3: #ff818277;
+  --kungalgame-trans-red-4: #fa454977;
+
+  --kungalgame-trans-pink-0: #ffeff777;
+  --kungalgame-trans-pink-1: #ffd3eb77;
+  --kungalgame-trans-pink-2: #ffadda77;
+
+  --kungalgame-shadow-0: 0px 0px 17px 5px var(--kungalgame-trans-blue-1);
+  --kungalgame-shadow-1: 0px 0px 7px 2px var(--kungalgame-trans-blue-1);
+}
+
+/* -------------------------------------------------------------------------- */
+:root {
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  --vp-c-brand-1: var(--kungalgame-blue-5);
+  --vp-c-brand-2: var(--kungalgame-blue-4);
+  --vp-c-brand-3: var(--kungalgame-blue-5);
+  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+
+  --vp-c-tip-1: var(--kungalgame-blue-4);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+  --vp-c-danger-1: var(--vp-c-red-1);
+  --vp-c-danger-2: var(--vp-c-red-2);
+  --vp-c-danger-3: var(--vp-c-red-3);
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/* Divider */
+:root {
+  --vp-c-bg: var(--kungalgame-trans-blue-0);
+  --vp-c-bg-alt: var(--kungalgame-trans-blue-0);
+  --vp-c-bg-elv: var(--kungalgame-white);
+  --vp-c-bg-soft: var(--kungalgame-trans-blue-1);
+
+  --vp-c-default-soft: var(--kungalgame-trans-blue-0);
+
+  --vp-c-border: var(--kungalgame-blue-4);
+
+  --vp-c-text-1: var(--kungalgame-font-color-2);
+  --vp-c-text-2: var(--kungalgame-font-color-0);
+
+  --vp-c-divider: var(--kungalgame-trans-blue-4);
+  --vp-c-gutter: var(--kungalgame-blue-0);
+  --vp-code-tab-divider: var(--kungalgame-trans-pink-2);
+  --vp-code-block-divider-color: var(--kungalgame-trans-pink-2);
+
+  --vp-code-line-highlight-color: var(--kungalgame-trans-blue-2);
+
+  --vp-nav-bg-color: var(--kungalgame-trans-white-9);
+
+  /* Mobile panel */
+  --vp-nav-screen-bg-color: var(--kungalgame-trans-white-2);
+
+  /* Search bg color */
+  --vp-local-search-bg: var(--kungalgame-blue-0);
+
+  /* Code */
+  --vp-code-bg: var(--kungalgame-trans-blue-1);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--kungalgame-white);
+  --vp-button-brand-bg: var(--kungalgame-blue-4);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--kungalgame-white);
+  --vp-button-brand-hover-bg: var(--kungalgame-pink-4);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--kungalgame-white);
+  --vp-button-brand-active-bg: var(--kungalgame-blue-4);
+
+  /* Home button alter */
+  --vp-button-alt-border: var(--kungalgame-blue-4);
+  --vp-button-alt-text: var(--kungalgame-blue-4);
+  --vp-button-alt-bg: var(--kungalgame-trans-blue-0);
+
+  /* Home button hover */
+  --vp-button-alt-hover-border: var(--kungalgame-blue-4);
+  --vp-button-alt-hover-text: var(--kungalgame-white);
+  --vp-button-alt-hover-bg: var(--kungalgame-blue-4);
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    var(--kungalgame-pink-3),
+    var(--kungalgame-blue-4)
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -45deg,
+    var(--kungalgame-trans-pink-2),
+    var(--kungalgame-trans-blue-2) 77%
+  );
+  --vp-home-hero-image-filter: blur(40px);
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(52px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(77px);
+  }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+  --vp-custom-block-info-border: transparent;
+  --vp-custom-block-info-text: var(--kungalgame-font-color-1);
+  --vp-custom-block-info-bg: var(--kungalgame-trans-pink-1);
+  --vp-custom-block-tip-code-bg: var(--kungalgame-trans-blue-2);
+
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--kungalgame-font-color-1);
+  --vp-custom-block-tip-bg: var(--kungalgame-trans-blue-2);
+  --vp-custom-block-tip-code-bg: var(--kungalgame-trans-blue-2);
+
+  --vp-custom-block-warning-border: transparent;
+  --vp-custom-block-warning-text: var(--kungalgame-font-color-1);
+  --vp-custom-block-warning-bg: var(--kungalgame-trans-yellow-2);
+  --vp-custom-block-warning-code-bg: var(--kungalgame-trans-blue-2);
+
+  --vp-custom-block-danger-border: transparent;
+  --vp-custom-block-danger-text: var(--kungalgame-white);
+  --vp-custom-block-danger-bg: var(--kungalgame-red-5);
+  --vp-custom-block-danger-code-bg: var(--kungalgame-trans-blue-2);
+}
+
+/**
+ * Component: Algolia
+ * -------------------------------------------------------------------------- */
+
+.DocSearch {
+  --docsearch-primary-color: var(--kungalgame-blue-4) !important;
+}

@@ -1,0 +1,37 @@
+*::-webkit-scrollbar {
+  display: inline;
+  width: 7px;
+  height: 0;
+}
+
+*::-webkit-scrollbar-thumb {
+  cursor: default;
+  background: var(--kungalgame-blue-4);
+  border-radius: 3px;
+}
+
+/* Top bar reset */
+.VPNavBar .container {
+  backdrop-filter: blur(5px);
+}
+
+/* Mobile */
+.VPLocalNav,
+.VPNavScreen,
+.VPSidebar {
+  backdrop-filter: blur(5px);
+}
+
+#app {
+  background-image: url('/bg/ren.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 767px) {
+  #app {
+    background-image: url('/bg/ren-mini.webp');
+  }
+}
