@@ -9,7 +9,7 @@ export default defineConfig({
   base: '/',
   srcDir: 'articles',
   outDir: './dist',
-  // sitemap: { hostname: 'https://soft.moe' },
+  sitemap: { hostname: 'https://kun1007.github.io/kun-vitepress-template/' },
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
 
   themeConfig: {
