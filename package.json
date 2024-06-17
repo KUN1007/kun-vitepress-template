@@ -1,6 +1,8 @@
 {
   "name": "kun-vitepress-template",
   "description": "A Moe VitePress Template modified by KUN!",
+  "packageManager": "pnpm@9.0.4",
+  "package-manager-strict": false,
   "author": {
     "name": "kun",
     "email": "kungalgame@gamil.com"
